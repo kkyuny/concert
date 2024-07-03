@@ -4,6 +4,7 @@
 ![image](https://github.com/kkyuny/concert/assets/88278485/c7800d75-ac99-4c97-a68a-b2c4c88ab0fb)
 
 **3. API 명세**
+
 ![image](https://github.com/kkyuny/concert/assets/88278485/65d1ca78-2693-4db8-921d-7aae93d5b0a4)
 
 ![image](https://github.com/kkyuny/concert/assets/88278485/f0e21b33-d847-4eba-a917-5c192ef42007)
