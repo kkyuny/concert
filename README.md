@@ -5,6 +5,7 @@
 
 **3. ERD**
 
-![image](https://github.com/kkyuny/concert/assets/88278485/b441b2c6-626e-4ce0-a7cc-580196e15c7f)
+![image](https://github.com/kkyuny/concert/assets/88278485/761077e9-c7a4-4f23-8713-292bc5b177fa)
+
 
    
