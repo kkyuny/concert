@@ -4,7 +4,6 @@
 ![image](https://github.com/kkyuny/concert/assets/88278485/c7800d75-ac99-4c97-a68a-b2c4c88ab0fb)
 
 **3. ERD**
-
-![image](https://github.com/kkyuny/concert/assets/88278485/062a0eaf-b491-4b67-a3a8-cc2d8b3befe5)
+![image](https://github.com/kkyuny/concert/assets/88278485/b441b2c6-626e-4ce0-a7cc-580196e15c7f)
 
    
