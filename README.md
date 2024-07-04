@@ -7,7 +7,7 @@
 
 ![image](https://github.com/kkyuny/concert/assets/88278485/65d1ca78-2693-4db8-921d-7aae93d5b0a4)
 
-![image](https://github.com/kkyuny/concert/assets/88278485/f0e21b33-d847-4eba-a917-5c192ef42007)
+![image](https://github.com/kkyuny/concert/assets/88278485/dee868cd-a765-4a5e-8b2d-737ae134f646)
 
 ![image](https://github.com/kkyuny/concert/assets/88278485/951efa27-e66e-4894-aa3e-9010cfcb0eb8)
 
