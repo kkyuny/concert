@@ -35,22 +35,22 @@
  1) 토큰 생성
 - 엔드포인트: POST /api/token/create
 - 요청
-   * Content-Type: application/json
-   * data:
+   - Content-Type: application/json
+   - data:
       {
         "id": Long
       }
 - 응답
- * 상태: 200
- * data: "tempToken"
+ - 상태: 200
+ - data: "tempToken"
 
  2) 예약 가능한 날짜 조회
 - 엔드포인트: GET /api/reservation/dates
 - 요청
-  * header: Authorization(token)
+  - header: Authorization(token)
 - 응답
-  * 상태: 200
-  * data:
+  - 상태: 200
+  - data:
      [        
         {"YYYY-MM-DD"}
         , ...
@@ -59,11 +59,11 @@
  3) 예약 가능한 좌석 조회
 - 엔드포인트: GET /api/reservation/seats
 - 요청
- * header: Athorization(token)
- * parameter: String date(YYYY-MM-DD)
+ - header: Athorization(token)
+ - parameter: String date(YYYY-MM-DD)
 - 응답
-  * 상태: 200
-  * data:
+  - 상태: 200
+  - data:
    [ {
        "seatNo": Long,
        "status": String
@@ -74,28 +74,28 @@
  4)좌석 예약
 - 엔드포인트: POST /api/reservation/reserve
 - 요청
- * header: Authorization(token)
- * Content-Type: application/json
- * data:
+ - header: Authorization(token)
+ - Content-Type: application/json
+ - data:
    {
      "concertDate": "YYYY-MM-DD",
      "seatNo": Long
    }
 - 응답
- * 상태: 200
- * data: "예약 성공"
+ - 상태: 200
+ - data: "예약 성공"
 
  5)사용자 잔액 조회
 - 엔드포인트: GET /api/charge
 - 요청
- * Content-Type: application/json
- * data:
+ - Content-Type: application/json
+ - data:
    {
      "id": Long
    }
 - 응답
- * 상태: 200
- * data:
+ - 상태: 200
+ - data:
    {
      "amount": Long
    }
@@ -103,25 +103,25 @@
 6)사용자 잔액 충전
 - 엔드포인트: POST /api/charge
 - 요청
- * Content-Type: application/json
- * data:
+ - Content-Type: application/json
+ - data:
    {
      "userId": Long,
      "amount": Long
    }
 - 응답
- * 상태: 200
- * data: "충전 성공"
+ - 상태: 200
+ - data: "충전 성공"
 
 7) 결제 처리
 - 엔드포인트: POST /api/payment
 - 요청 
- * Content-Type: application/json
- * data:
+ - Content-Type: application/json
+ - data:
    {
      "userId": Long,
      "amount": Long
    }
 - 응답
- * 상태: 200
- * data: "결제 성공"
+ - 상태: 200
+ - data: "결제 성공"
