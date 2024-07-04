@@ -21,11 +21,13 @@
 
 **4. ERD**
 
-![image](https://github.com/kkyuny/concert/assets/88278485/2b73d313-fccf-4821-9191-b45bd437fdea)
+![image](https://github.com/kkyuny/concert/assets/88278485/81779844-d6cc-45e4-a00b-19f6bdebc1a4)
+ reserve table
+- 좌석 예약 요청 시 테이블에 consert_id와 seat_no이 복합키로 설정되어 해당 정보를 insert 함.
+- 유효시간 동안에 해당 row가 존재하는 한 해당 reserve 테이블에 동일한 콘서트와 좌석의 insert 불가
+- 유효시간 내 결제 완료 시 status -> 예약완료로 변경 -> 새로운 예약정보 여전히 insert 불가
+- 유효시간 내 결제 미완료시 해당 row 삭제처리(reserve_history 테이블에 신청 정보는 남기려고함) -> 해당 콘서트와 좌석에 대해 새로운 예약정보 insert가 가능하게 만듬
 
-- 좌석 예약 요청 시 reserve 테이블에 consert_id와 seat_no이 복합키로 설정되어 해당 정보가 insert 됌.
-- 유효시간(reserveDate + vaildTime(분)) 동안에 해당 row가 존재하는 한 해당 reserve 테이블에 동일한 콘서트와 좌석의 insert 불가
-- 유효시간 내 결제 완료 시 status -> 예약완료로 변경 -> 새로운 예약정보 insert 불가
-- 유효시간 내 결제 미완료시 해당 row 삭제처리(reserve_history 테이블에 신청 정보는 남아 있음) -> 해당 콘서트와 좌석에 대해 새로운 예약정보 insert가 가능하게 만듬
+ queue table
 - queue는 유효시간이 초과하거나 결제완료 된 row는 삭제 진행하여 관리 
    
