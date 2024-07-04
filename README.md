@@ -21,7 +21,7 @@
 
 **4. ERD**
 
-![image](https://github.com/kkyuny/concert/assets/88278485/81767d72-0cc5-4b60-95d3-636c992c01d8)
+![image](https://github.com/kkyuny/concert/assets/88278485/2b73d313-fccf-4821-9191-b45bd437fdea)
 
 - 좌석 예약 요청 시 reserve 테이블에 consert_id와 seat_no이 복합키로 설정되어 해당 정보가 insert 됌.
 - 유효시간(reserveDate + vaildTime(분)) 동안에 해당 row가 존재하는 한 해당 reserve 테이블에 동일한 콘서트와 좌석의 insert 불가
