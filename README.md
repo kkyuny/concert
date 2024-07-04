@@ -41,16 +41,16 @@
         "id": Long
       }
 - 응답
- - 상태: 200
- - data: "tempToken"
+- 상태: 200
+   - data: "tempToken"
 
  2) 예약 가능한 날짜 조회
 - 엔드포인트: GET /api/reservation/dates
 - 요청
-  - header: Authorization(token)
+   - header: Authorization(token)
 - 응답
-  - 상태: 200
-  - data:
+   - 상태: 200
+   - data:
      [        
         {"YYYY-MM-DD"}
         , ...
@@ -59,8 +59,8 @@
  3) 예약 가능한 좌석 조회
 - 엔드포인트: GET /api/reservation/seats
 - 요청
- - header: Athorization(token)
- - parameter: String date(YYYY-MM-DD)
+   - header: Athorization(token)
+   - parameter: String date(YYYY-MM-DD)
 - 응답
   - 상태: 200
   - data:
