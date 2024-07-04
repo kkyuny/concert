@@ -33,8 +33,8 @@
 
 **5. mock API 명세**
  1) 토큰 생성
-- 엔드포인트: POST /api/token/create
-- 요청
+* 엔드포인트: POST /api/token/create
+* 요청
    - Content-Type: application/json
    - data:
       {
