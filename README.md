@@ -1,4 +1,4 @@
-**1. 시나리오: 콘서트 예약 서비스**
+![image](https://github.com/kkyuny/concert/assets/88278485/a397db1a-80c5-40c1-ac5c-ad46c4d7fc23)**1. 시나리오: 콘서트 예약 서비스**
    
 **2. 마일스톤**
 ![image](https://github.com/kkyuny/concert/assets/88278485/c7800d75-ac99-4c97-a68a-b2c4c88ab0fb)
@@ -9,7 +9,7 @@
 
 ![image](https://github.com/kkyuny/concert/assets/88278485/b4a428e3-d434-47f0-ad37-258a8f08f70e)
 
-![image](https://github.com/kkyuny/concert/assets/88278485/7a4ac8a4-dc0e-4c4d-89de-31a54a9933d4)
+![image](https://github.com/kkyuny/concert/assets/88278485/28b66b6d-7288-4277-8e64-ece18b3bb0da)
 
 ![image](https://github.com/kkyuny/concert/assets/88278485/a462bc01-11fe-437d-b7a9-c8606e281be4)
 
