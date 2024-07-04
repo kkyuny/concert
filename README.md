@@ -74,28 +74,28 @@
  4)좌석 예약
 - 엔드포인트: POST /api/reservation/reserve
 - 요청
- - header: Authorization(token)
- - Content-Type: application/json
- - data:
+   - header: Authorization(token)
+   - Content-Type: application/json
+   - data:
    {
      "concertDate": "YYYY-MM-DD",
      "seatNo": Long
    }
 - 응답
- - 상태: 200
- - data: "예약 성공"
+   - 상태: 200
+   - data: "예약 성공"
 
  5)사용자 잔액 조회
 - 엔드포인트: GET /api/charge
 - 요청
- - Content-Type: application/json
- - data:
+   - Content-Type: application/json
+   - data:
    {
      "id": Long
    }
 - 응답
- - 상태: 200
- - data:
+   - 상태: 200
+   - data:
    {
      "amount": Long
    }
@@ -103,25 +103,25 @@
 6)사용자 잔액 충전
 - 엔드포인트: POST /api/charge
 - 요청
- - Content-Type: application/json
- - data:
+   - Content-Type: application/json
+   - data:
    {
      "userId": Long,
      "amount": Long
    }
 - 응답
- - 상태: 200
- - data: "충전 성공"
+   - 상태: 200
+   - data: "충전 성공"
 
 7) 결제 처리
 - 엔드포인트: POST /api/payment
 - 요청 
- - Content-Type: application/json
- - data:
+   - Content-Type: application/json
+   - data:
    {
      "userId": Long,
      "amount": Long
    }
 - 응답
- - 상태: 200
- - data: "결제 성공"
+   - 상태: 200
+   - data: "결제 성공"
