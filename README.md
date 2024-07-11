@@ -21,7 +21,8 @@
 
 **4. ERD**
 
-![image](https://github.com/kkyuny/concert/assets/88278485/81779844-d6cc-45e4-a00b-19f6bdebc1a4)
+![image](https://github.com/kkyuny/concert/assets/88278485/31fa317d-75bf-4268-83ac-b9819afad196)
+
  
  reserve table
 - 좌석 예약 요청 시 테이블에 consert_id와 seat_no이 복합키로 설정되어 해당 정보를 insert 함.
