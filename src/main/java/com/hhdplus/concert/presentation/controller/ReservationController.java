@@ -46,6 +46,9 @@ public class ReservationController {
         return ReservationResponseDto.toResponse(reservationFacade.reserveSeat(ReservationRequestDto.toFacadeDto(dto)));
     }
 
+    /*
+        requestBody 값에 대한 검증을 이런식으로 해도 괜찮은지 궁금합니다.
+     */
     private void validateRequest(ReservationRequestDto dto, boolean checkSeatNo) throws InvalidReqBodyException {
         if (dto.getConcertDate() == null) {
             throw new InvalidReqBodyException("ConcertDate is invalid.");

@@ -21,6 +21,10 @@ public class TokenInterceptor implements HandlerInterceptor {
 
     @Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception, UnauthorizedException, ForbidenException {
+		/*
+			만들고나서 생각해보니 사용해야할 user 정보를
+			어떤식으로 controller로 넘겨서 사용할 수 있는지 궁금합니다.
+		 */
 		LOGGER.info("ACCESS URI : " + request.getRequestURI());
 
 		QueueRequestDto queueRequestDto = new QueueRequestDto();

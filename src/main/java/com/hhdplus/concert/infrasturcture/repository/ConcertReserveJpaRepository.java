@@ -12,6 +12,10 @@ import java.util.List;
 
 @Repository
 public interface ConcertReserveJpaRepository extends JpaRepository<ConcertReserve, Long> {
+    /*
+        Jpa의 사용이 아직도 익숙치가 않은데 join이 필요한 경우 이런식으로
+        쿼리문을 사용해도 괜찮은지 궁금합니다.
+     */
     @Query("SELECT cs.concertDate FROM concert_schedule cs " +
             "LEFT JOIN concert_reserve cr ON cs.id = cr.concertScheduleId " +
             "WHERE cs.concert.id = :concertId " +
