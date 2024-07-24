@@ -1,7 +1,6 @@
-package com.hhdplus.concert.presentation.dto.response;
+package com.hhdplus.concert.interfaces.presentation.dto.request;
 
 import com.hhdplus.concert.application.dto.ChargeFacadeDto;
-import com.hhdplus.concert.application.dto.PaymentFacadeDto;
 import lombok.*;
 
 @Getter
@@ -9,14 +8,13 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class PaymentResponseDto {
+public class ChargeRequestDto {
     private Long id;
     private Long userId;
     private Long amount;
-    private Long concertId;
 
-    public static PaymentResponseDto toResponse(PaymentFacadeDto dto) {
-        return PaymentResponseDto.builder()
+    public static ChargeFacadeDto toFacadeDto(ChargeRequestDto dto) {
+        return ChargeFacadeDto.builder()
                 .userId(dto.getUserId())
                 .amount(dto.getAmount())
                 .build();

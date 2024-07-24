@@ -16,4 +16,6 @@ public interface QueueRepository {
     Long getNoByToken(String token);
 
     List<String> findActiveQueues(Long myNo);
+
+    void removeToken(Long domain);
 }

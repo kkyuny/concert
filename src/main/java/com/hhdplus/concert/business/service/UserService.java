@@ -1,5 +1,6 @@
 package com.hhdplus.concert.business.service;
 
+import com.hhdplus.concert.application.dto.UserFacadeDto;
 import com.hhdplus.concert.business.domain.UserDomain;
 import com.hhdplus.concert.business.repository.ChargeRepository;
 import com.hhdplus.concert.business.repository.UserRepository;
@@ -20,15 +21,11 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
-    public UserDomain getUserAmount(UserDomain domain) {
-        Long userId = domain.getUserId();
-        return userRepository.getAmountByUserId(userId);
+    public UserDomain getUserById(Long userId) {
+        return userRepository.getUserById(userId);
     }
 
-    public void updateUserAmount(UserDomain domain) {
-        Long userId = domain.getUserId();
-        Long price = domain.getPrice();
-
+    public void updateUserAmount(Long userId, Long price) {
         try {
             userRepository.updateUserAmount(userId, price);
         } catch (Exception e) {
@@ -36,4 +33,5 @@ public class UserService {
             LOGGER.error("update user amount error", e);
         }
     }
+
 }

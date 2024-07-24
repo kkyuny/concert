@@ -45,4 +45,7 @@ public class QueueRepositoryImpl implements QueueRepository {
     public List<String> findActiveQueues(Long myNo) {
         return jpaRepository.findActiveQueues(myNo);
     }
+
+    @Override
+    public void removeToken(Long userId) { jpaRepository.deleteById(userId); }
 }

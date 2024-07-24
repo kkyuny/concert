@@ -65,4 +65,23 @@ public class ReservationService {
 
         return concertReserveRepository.getUserReserveStatus(concertId, concertScheduleId, seatNo);
     }
+
+    public void cancelReservation(List<Long> reservationIdList) {
+        try {
+            for(Long reservationId : reservationIdList){
+                ReservationDomain domain = new ReservationDomain();
+                domain.setStatus(String.valueOf(reservationId));
+                domain.setStatus("canceled");
+                concertReserveRepository.updateStatus(domain);
+            }
+        } catch (Exception e) {
+            TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
+            LOGGER.error("reserve seat error", e);
+        }
+    }
+
+    public List<Long> getNeedExpireReservationIdList() {
+
+        return concertReserveRepository.getNeedExpireReservationIdList("reserved");
+    }
 }

@@ -1,13 +1,12 @@
-package com.hhdplus.concert.presentation.controller;
+package com.hhdplus.concert.interfaces.presentation.controller;
 
 import com.hhdplus.concert.application.facade.PaymentFacade;
-import com.hhdplus.concert.presentation.common.exception.InvalidReqBodyException;
-import com.hhdplus.concert.presentation.dto.request.PaymentRequestDto;
-import com.hhdplus.concert.presentation.dto.response.PaymentResponseDto;
+import com.hhdplus.concert.interfaces.presentation.common.exception.InvalidReqBodyException;
+import com.hhdplus.concert.interfaces.presentation.dto.request.PaymentRequestDto;
+import com.hhdplus.concert.interfaces.presentation.dto.response.PaymentResponseDto;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -1,18 +1,13 @@
-package com.hhdplus.concert.presentation.controller;
+package com.hhdplus.concert.interfaces.presentation.controller;
 
 import com.hhdplus.concert.application.facade.ReservationFacade;
-import com.hhdplus.concert.presentation.common.exception.InvalidReqBodyException;
-import com.hhdplus.concert.presentation.dto.request.ReservationRequestDto;
-import com.hhdplus.concert.presentation.dto.response.ReservationResponseDto;
+import com.hhdplus.concert.interfaces.presentation.common.exception.InvalidReqBodyException;
+import com.hhdplus.concert.interfaces.presentation.dto.request.ReservationRequestDto;
+import com.hhdplus.concert.interfaces.presentation.dto.response.ReservationResponseDto;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.List;
 
 @RestController
 @RequestMapping("api/reservation")

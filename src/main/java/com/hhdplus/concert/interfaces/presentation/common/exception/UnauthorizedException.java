@@ -1,4 +1,4 @@
-package com.hhdplus.concert.presentation.common.exception;
+package com.hhdplus.concert.interfaces.presentation.common.exception;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -6,15 +6,15 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 @ResponseStatus(value = HttpStatus.UNAUTHORIZED, reason = "Unauthorized")
-public class ForbidenException extends RuntimeException{
+public class UnauthorizedException extends RuntimeException{
 
-	static Logger LOGGER = LoggerFactory.getLogger(ForbidenException.class);
+	static Logger LOGGER = LoggerFactory.getLogger(UnauthorizedException.class);
 
-	public ForbidenException() {
+	public UnauthorizedException() {
 		super();
 	}
 
-	public ForbidenException(String message) {
+	public UnauthorizedException(String message) {
 		super(message);
 		LOGGER.error(message);
 	}

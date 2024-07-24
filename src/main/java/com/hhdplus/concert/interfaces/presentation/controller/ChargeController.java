@@ -1,14 +1,12 @@
-package com.hhdplus.concert.presentation.controller;
+package com.hhdplus.concert.interfaces.presentation.controller;
 
 import com.hhdplus.concert.application.facade.ChargeFacade;
-import com.hhdplus.concert.presentation.common.exception.InvalidReqBodyException;
-import com.hhdplus.concert.presentation.dto.request.ChargeRequestDto;
-import com.hhdplus.concert.presentation.dto.request.QueueRequestDto;
-import com.hhdplus.concert.presentation.dto.response.ChargeResponseDto;
+import com.hhdplus.concert.interfaces.presentation.common.exception.InvalidReqBodyException;
+import com.hhdplus.concert.interfaces.presentation.dto.request.ChargeRequestDto;
+import com.hhdplus.concert.interfaces.presentation.dto.response.ChargeResponseDto;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

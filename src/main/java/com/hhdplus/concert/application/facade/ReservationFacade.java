@@ -5,6 +5,8 @@ import com.hhdplus.concert.business.service.ReservationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Component
 public class ReservationFacade {
 
@@ -22,5 +24,10 @@ public class ReservationFacade {
     public ReservationFacadeDto reserveSeat(ReservationFacadeDto dto) {
         reservationService.reserveSeat(ReservationFacadeDto.toDomain(dto));
         return dto;
+    }
+
+    public void cancelReservation() {
+        List<Long> reservationIdList = reservationService.getNeedExpireReservationIdList();
+        reservationService.cancelReservation(reservationIdList);
     }
 }

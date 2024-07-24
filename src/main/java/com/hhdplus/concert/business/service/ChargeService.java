@@ -31,8 +31,9 @@ public class ChargeService {
         }
     }
 
-    public void updateConcertReserve(ReservationDomain domain) {
+    public void updateConcertReserveToFinish(ReservationDomain domain) {
         try {
+            domain.setStatus("finish");
             chargeRepository.updateConcertReserve(domain);
         } catch (Exception e) {
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();

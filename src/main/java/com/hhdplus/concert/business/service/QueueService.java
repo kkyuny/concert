@@ -2,8 +2,6 @@ package com.hhdplus.concert.business.service;
 
 import com.hhdplus.concert.business.domain.QueueDomain;
 import com.hhdplus.concert.business.repository.QueueRepository;
-import com.hhdplus.concert.presentation.common.TokenInterceptor;
-import com.hhdplus.concert.presentation.common.exception.InternalServerErrorException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -76,5 +74,28 @@ public class QueueService {
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
             LOGGER.error("token status change error", e);
         }
+    }
+
+    public void expireToken(Long userId) {
+        try{
+            queueRepository.removeToken(userId);
+        } catch (Exception e) {
+            TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
+            LOGGER.error("token create error", e);
+        }
+    }
+
+    public void activateTokens(List<QueueDomain> activateTargets) {
+    }
+
+    public void expireTokens(List<QueueDomain> expireTargets) {
+    }
+
+    public List<QueueDomain> findUsersToActivate() {
+        return null;
+    }
+
+    public List<QueueDomain> findActiveUsersMoreThan5Minutes() {
+        return null;
     }
 }

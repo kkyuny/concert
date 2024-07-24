@@ -1,4 +1,4 @@
-package com.hhdplus.concert.presentation.dto.request;
+package com.hhdplus.concert.interfaces.presentation.dto.request;
 
 import com.hhdplus.concert.application.dto.PaymentFacadeDto;
 import lombok.*;

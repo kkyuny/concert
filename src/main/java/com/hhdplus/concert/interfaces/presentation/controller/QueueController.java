@@ -1,8 +1,8 @@
-package com.hhdplus.concert.presentation.controller;
+package com.hhdplus.concert.interfaces.presentation.controller;
 
 import com.hhdplus.concert.application.facade.QueueFacade;
-import com.hhdplus.concert.presentation.dto.request.QueueRequestDto;
-import com.hhdplus.concert.presentation.dto.response.QueueResponseDto;
+import com.hhdplus.concert.interfaces.presentation.dto.request.QueueRequestDto;
+import com.hhdplus.concert.interfaces.presentation.dto.response.QueueResponseDto;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;

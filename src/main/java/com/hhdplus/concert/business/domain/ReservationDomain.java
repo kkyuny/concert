@@ -14,6 +14,7 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 public class ReservationDomain {
+    private Long id;
     private Long concertId;
     private Long concertScheduleId;
     private Long userId;

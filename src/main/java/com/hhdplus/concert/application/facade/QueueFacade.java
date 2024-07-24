@@ -1,9 +1,13 @@
 package com.hhdplus.concert.application.facade;
 
 import com.hhdplus.concert.application.dto.QueueFacadeDto;
+import com.hhdplus.concert.business.domain.QueueDomain;
 import com.hhdplus.concert.business.service.QueueService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 @Component
 public class QueueFacade {
@@ -38,4 +42,13 @@ public class QueueFacade {
         return QueueFacadeDto.toFacadeDto(QueueFacadeDto.toDomain(dto));
     }
 
+    public void activateTokens() {
+        List<QueueDomain> activateTargets = queueService.findUsersToActivate();
+        queueService.activateTokens(activateTargets);
+    }
+
+    public void expireTokens() {
+        List<QueueDomain> expireTargets = queueService.findActiveUsersMoreThan5Minutes();
+        queueService.expireTokens(expireTargets);
+    }
 }

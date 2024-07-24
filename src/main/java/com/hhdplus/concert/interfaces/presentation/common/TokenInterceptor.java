@@ -1,10 +1,10 @@
-package com.hhdplus.concert.presentation.common;
+package com.hhdplus.concert.interfaces.presentation.common;
 
 
 import com.hhdplus.concert.application.facade.QueueFacade;
-import com.hhdplus.concert.presentation.common.exception.ForbidenException;
-import com.hhdplus.concert.presentation.common.exception.UnauthorizedException;
-import com.hhdplus.concert.presentation.dto.request.QueueRequestDto;
+import com.hhdplus.concert.interfaces.presentation.common.exception.ForbidenException;
+import com.hhdplus.concert.interfaces.presentation.common.exception.UnauthorizedException;
+import com.hhdplus.concert.interfaces.presentation.dto.request.QueueRequestDto;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.slf4j.Logger;

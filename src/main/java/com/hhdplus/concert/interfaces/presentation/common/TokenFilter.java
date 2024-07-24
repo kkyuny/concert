@@ -1,6 +1,6 @@
-package com.hhdplus.concert.presentation.common;
+package com.hhdplus.concert.interfaces.presentation.common;
 
-import com.hhdplus.concert.presentation.common.exception.InvalidReqBodyException;
+import com.hhdplus.concert.interfaces.presentation.common.exception.InvalidReqBodyException;
 import jakarta.servlet.*;
 import jakarta.servlet.http.HttpServletRequest;
 import org.slf4j.Logger;

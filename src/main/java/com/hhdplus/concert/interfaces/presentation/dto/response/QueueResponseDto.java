@@ -1,4 +1,4 @@
-package com.hhdplus.concert.presentation.dto.response;
+package com.hhdplus.concert.interfaces.presentation.dto.response;
 
 import com.hhdplus.concert.application.dto.QueueFacadeDto;
 import lombok.*;

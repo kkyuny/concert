@@ -37,4 +37,14 @@ public class ConcertReserveRepositoryImpl implements ConcertReserveRepository {
         return jpaRepository.findUserConcertReserve(concertId, concertScheduleId, seatNo);
     }
 
+    @Override
+    public List<Long> getNeedExpireReservationIdList(String reserved) {
+        return List.of();
+    }
+
+    @Override
+    public void updateStatus(ReservationDomain domain) {
+        ReservationDomain.toDomain(jpaRepository.save(ConcertReserve.toEntity(domain)));
+    }
+
 }
