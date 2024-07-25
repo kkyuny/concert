@@ -20,4 +20,6 @@ public interface QueueRepository {
     void removeToken(Long domain);
 
     List<QueueDomain> findUsersToActivate();
+
+    List<QueueDomain> findUsersByStatus(String status);
 }

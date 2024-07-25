@@ -33,4 +33,5 @@ public class QueueDomain {
                 .id(domain.getUserId())
                 .build();
     }
+
 }

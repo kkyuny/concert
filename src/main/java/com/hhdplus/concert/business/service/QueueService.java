@@ -13,6 +13,7 @@ import org.springframework.transaction.interceptor.TransactionAspectSupport;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 @Service
 @Transactional(propagation = Propagation.REQUIRED, rollbackFor = Exception.class)
@@ -86,21 +87,32 @@ public class QueueService {
         }
     }
 
-    public void activateTokens(List<QueueDomain> activateTargets) {
-
-        long activeUsersCount = queueRepository.countByStatus("active");
-    }
-
     public void expireTokens(List<QueueDomain> expireTargets) {
-    }
-
-    public List<QueueDomain> findUsersToActivate() {
-
-
-        return queueRepository.findUsersToActivate();
     }
 
     public List<QueueDomain> findActiveUsersMoreThan5Minutes() {
         return null;
     }
+
+    public List<QueueDomain> findUsersToActivate() {
+        // Fetch all users with 'waiting' status
+        List<QueueDomain> waitingUsers = queueRepository.findUsersByStatus("waiting");
+
+        // Sort by creationDate to get the oldest tokens first
+        List<QueueDomain> sortedWaitingUsers = waitingUsers.stream()
+                .sorted((u1, u2) -> u1.getRegiDate().compareTo(u2.getRegiDate()))
+                .collect(Collectors.toList());
+
+        // Return up to 100 users
+        return sortedWaitingUsers.stream().limit(100).collect(Collectors.toList());
+    }
+
+    public void activateTokens(List<QueueDomain> activateTargets) {
+        for (QueueDomain user : activateTargets) {
+            user.setStatus("active");
+            queueRepository.save(user); // Save the updated user status
+        }
+    }
+
+
 }
