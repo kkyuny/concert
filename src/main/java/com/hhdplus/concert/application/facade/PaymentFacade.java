@@ -45,6 +45,7 @@ public class PaymentFacade {
             paymentService.savePayment(PaymentFacadeDto.toDomain(dto));
             chargeService.updateConcertReserveToFinish(reservation.get());
             queueService.expireToken(user.getUserId());
+
         } else {
             throw new BadRequestException("Status is not waiting");
         }

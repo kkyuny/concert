@@ -26,7 +26,7 @@ public class PaymentService {
             paymentRepository.save(domain);
         } catch (Exception e) {
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
-            LOGGER.error("sava payment error", e);
+            LOGGER.error("save payment error", e);
         }
     }
 }

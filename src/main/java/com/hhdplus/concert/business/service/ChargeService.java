@@ -22,9 +22,13 @@ public class ChargeService {
     @Autowired
     private ChargeRepository chargeRepository;
 
-    public void saveUserAmount(ChargeDomain domain) {
+    @Autowired
+    private UserRepository userRepository;
+
+    public void saveUserAmount(Long userId, Long amount, Long chargeAmount) {
         try {
-            chargeRepository.save(domain);
+            userRepository.updateUserAmount(userId, amount + chargeAmount);
+            //charge history
         } catch (Exception e) {
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
             LOGGER.error("update user amount error", e);

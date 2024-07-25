@@ -19,6 +19,7 @@ import java.util.UUID;
 public class QueueService {
 
     private static final int MAX_ACTIVE_USERS = 100;
+    private static final int MAX_ACTIVE_MINUTES = 5;
 
     static Logger LOGGER = LoggerFactory.getLogger(QueueService.class);
 
@@ -86,13 +87,17 @@ public class QueueService {
     }
 
     public void activateTokens(List<QueueDomain> activateTargets) {
+
+        long activeUsersCount = queueRepository.countByStatus("active");
     }
 
     public void expireTokens(List<QueueDomain> expireTargets) {
     }
 
     public List<QueueDomain> findUsersToActivate() {
-        return null;
+
+
+        return queueRepository.findUsersToActivate();
     }
 
     public List<QueueDomain> findActiveUsersMoreThan5Minutes() {

@@ -68,6 +68,7 @@ public class ReservationService {
 
     public void cancelReservation(List<Long> reservationIdList) {
         try {
+            // 벌크 업데이트 변환 필요
             for(Long reservationId : reservationIdList){
                 ReservationDomain domain = new ReservationDomain();
                 domain.setStatus(String.valueOf(reservationId));
